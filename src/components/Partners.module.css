@@ -1,0 +1,58 @@
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.header p { color: var(--text-muted); }
+
+.grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+
+.logoItem { transition: transform 0.3s ease; }
+
+.imageBox {
+  background: white;
+  padding: 1.4rem 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 80px;
+  transition: all 0.35s ease;
+}
+
+.logoItem:hover .imageBox {
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+  transform: translateY(-4px);
+}
+
+.pLogo {
+  filter: grayscale(1) opacity(0.55);
+  transition: all 0.35s ease;
+  width: auto;
+  height: auto;
+}
+
+.logoItem:hover .pLogo {
+  filter: grayscale(0) opacity(1);
+}
+
+/* Fallback text logos when images fail */
+.fallbackLogo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .imageBox { padding: 1rem 1.5rem; min-width: 140px; }
+}

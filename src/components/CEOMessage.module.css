@@ -1,0 +1,136 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* Image side */
+.imageWrapper { position: relative; }
+
+.imageFrame {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.ceoImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageFrame:hover .ceoImg { transform: scale(1.04); }
+
+.badge {
+  position: absolute;
+  bottom: 2.5rem;
+  right: -2rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.75rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+.badgeValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.badgeLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.decoSquare {
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  width: 180px;
+  height: 180px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-xl);
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.decoCircle {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 100px;
+  height: 100px;
+  background: var(--gradient-accent);
+  border-radius: 50%;
+  opacity: 0.12;
+  z-index: 1;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Content side */
+.quoteIcon {
+  color: var(--primary);
+  opacity: 0.08;
+  margin-bottom: -0.5rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  margin-bottom: 2rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 99px;
+  margin-bottom: 2rem;
+}
+
+.signature { margin-bottom: 2.5rem; }
+
+.signature h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+.signature p {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; gap: 4rem; }
+  .imageWrapper { max-width: 480px; margin: 0 auto; }
+  .badge { right: 1rem; }
+}

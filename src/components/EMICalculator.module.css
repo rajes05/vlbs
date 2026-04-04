@@ -1,0 +1,191 @@
+.section {
+  background: var(--surface);
+  padding: 6rem 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.header p { color: var(--text-muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* Calculator inputs panel */
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputGroup label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.92rem;
+}
+
+.labelTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.labelValue {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.range {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  outline: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 10px rgba(0, 51, 102, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+.rangeHints {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+}
+
+/* Result card */
+.resultCard {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 20px 48px rgba(0, 51, 102, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+.resultCard::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+
+.emiDisplay {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.emiDisplay p {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.emiDisplay h3 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: white;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.breakdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdownItem p {
+  opacity: 0.75;
+  font-size: 0.88rem;
+  color: white;
+  margin: 0;
+}
+
+.breakdownItem span {
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+}
+
+.totalPayable {
+  font-size: 1.2rem !important;
+  color: var(--accent-light) !important;
+}
+
+@media (max-width: 992px) {
+  .grid { grid-template-columns: 1fr; }
+}
