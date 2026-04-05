@@ -56,7 +56,7 @@ const Contact = () => {
                 <div className={styles.iconBox}><MapPin size={20} /></div>
                 <div>
                   <strong>Office</strong>
-                  <p>Dhulikhel, Kavre, Nepal</p>
+                  <p>Tilottama, Nepal</p>
                 </div>
               </div>
               <div className={styles.contactItem}>
