@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 import styles from './Partners.module.css';
 
 const partners = [
-  { name: 'Nabil Bank', logo: 'https://vlbs.com.np/static/media/nabil-logo.png' },
-  { name: 'Machhapuchchhre Bank', logo: 'https://vlbs.com.np/static/media/mbl-logo.png' },
-  { name: 'Prabhu Bank', logo: 'https://vlbs.com.np/static/media/prabhu-logo.png' },
-  { name: 'Global IME', logo: 'https://vlbs.com.np/static/media/global-logo.png' },
-  { name: 'NIC Asia', logo: 'https://vlbs.com.np/static/media/nic-logo.png' },
+  { name: 'Nabil Bank', logo: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=200&h=100&auto=format&fit=crop' },
+  { name: 'Machhapuchchhre Bank', logo: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=200&h=100&auto=format&fit=crop' },
+  { name: 'Prabhu Bank', logo: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=200&h=100&auto=format&fit=crop' },
+  { name: 'Global IME', logo: 'https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=200&h=100&auto=format&fit=crop' },
+  { name: 'NIC Asia', logo: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=200&h=100&auto=format&fit=crop' },
 ];
 
 const Partners = () => {

@@ -1,8 +1,9 @@
 .statsSection {
-  background: var(--gradient-primary);
-  padding: 5rem 0;
+  background: var(--background);
+  padding: 6rem 0;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--border);
 }
 
 .statsSection::before {
@@ -12,8 +13,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-image: radial-gradient(circle, rgba(75, 44, 133, 0.03) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
 }
 
 .grid {
@@ -26,49 +27,51 @@
 
 .statItem {
   text-align: center;
-  color: white;
-  padding: 2.5rem 1.5rem;
-  border-radius: var(--radius-xl);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  transition: all 0.35s ease;
-  backdrop-filter: blur(8px);
+  color: var(--foreground);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-md);
+  background: white;
+  border: 1px solid rgba(75, 44, 133, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .statItem:hover {
-  background: rgba(255,255,255,0.14);
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(75, 44, 133, 0.08);
+  border-color: rgba(75, 44, 133, 0.15);
 }
 
 .iconBox {
-  width: 56px;
-  height: 56px;
-  background: rgba(255,255,255,0.14);
+  width: 64px;
+  height: 64px;
+  background: rgba(229, 168, 18, 0.1); /* Gold tint */
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  color: var(--accent-light);
-  transition: transform 0.3s ease;
+  color: var(--accent);
+  transition: all 0.3s ease;
 }
 
 .statItem:hover .iconBox { transform: scale(1.12) rotate(-6deg); }
 
 .value {
-  font-size: 2.75rem;
+  font-size: 3.25rem;
   font-weight: 800;
-  color: white;
+  color: var(--primary);
   line-height: 1;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
 }
 
 .label {
-  font-size: 0.9rem;
-  opacity: 0.75;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 992px) {

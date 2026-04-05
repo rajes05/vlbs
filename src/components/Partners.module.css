@@ -35,14 +35,15 @@
 }
 
 .pLogo {
-  filter: grayscale(1) opacity(0.55);
   transition: all 0.35s ease;
   width: auto;
   height: auto;
+  opacity: 0.9;
 }
 
 .logoItem:hover .pLogo {
-  filter: grayscale(0) opacity(1);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Fallback text logos when images fail */

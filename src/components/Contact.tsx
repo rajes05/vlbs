@@ -77,7 +77,7 @@ const Contact = () => {
                 <div className={styles.iconBox}><Mail size={20} /></div>
                 <div>
                   <strong>Email</strong>
-                  <p>vlbs@vlbs.com.np</p>
+                  <p>info@cornortech.com.np</p>
                 </div>
               </div>
             </div>

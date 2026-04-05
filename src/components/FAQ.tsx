@@ -7,24 +7,24 @@ import styles from './FAQ.module.css';
 
 const faqs = [
   {
-    q: 'What types of loans does VLBS offer?',
-    a: 'VLBS offers a wide range of loan products including agricultural loans, micro-enterprise loans, home improvement loans, and collateral-free group loans — all designed to empower low-income communities.'
+    q: 'What types of loans does Cornortech offer?',
+    a: 'Cornortech offers a wide range of loan products including agricultural loans, micro-enterprise loans, home improvement loans, and collateral-free group loans — all designed to empower low-income communities.'
   },
   {
     q: 'What are the criteria for obtaining a loan?',
-    a: 'Applicants must be a member of VLBS, have a good credit history, and meet the minimum income requirements for the loan type applied for. Group loans do not require collateral.'
+    a: 'Applicants must be a member of Cornortech, have a good credit history, and meet the minimum income requirements for the loan type applied for. Group loans do not require collateral.'
   },
   {
     q: 'How do we support financial inclusion?',
-    a: 'VLBS reaches remote rural and semi-urban areas that traditional banks do not serve, offering doorstep banking, financial literacy programs, and community group savings schemes.'
+    a: 'Cornortech reaches remote rural and semi-urban areas that traditional banks do not serve, offering doorstep banking, financial literacy programs, and community group savings schemes.'
   },
   {
-    q: 'How can I become a member of VLBS?',
-    a: 'You can become a member by visiting your nearest VLBS branch, filling out the membership form, and paying a nominal membership fee. Our staff will guide you through the process.'
+    q: 'How can I become a member of Cornortech?',
+    a: 'You can become a member by visiting your nearest Cornortech branch, filling out the membership form, and paying a nominal membership fee. Our staff will guide you through the process.'
   },
   {
-    q: 'What remittance services does VLBS provide?',
-    a: 'VLBS partners with licensed remittance companies to facilitate fast and secure money transfers from abroad directly to your account or through our branch network.'
+    q: 'What remittance services does Cornortech provide?',
+    a: 'Cornortech partners with licensed remittance companies to facilitate fast and secure money transfers from abroad directly to your account or through our branch network.'
   },
 ];
 

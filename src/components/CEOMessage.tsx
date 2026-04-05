@@ -23,7 +23,7 @@ const CEOMessage = () => {
             <div className={styles.decoCircle} />
             <div className={styles.imageFrame}>
               <Image
-                src="/images/ceo.svg"
+                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="CEO Basanta Raj Lamsal"
                 width={500}
                 height={600}
@@ -57,20 +57,20 @@ const CEOMessage = () => {
             <div className={styles.divider} />
             <div className={styles.text}>
               <p>
-                Namaste and a very warm greeting to all members of VLBS family and well wishers.
+                Namaste and a very warm greeting to all members of Cornortech family and well wishers.
                 I strongly believe that communication is an integral part of an organization.
                 I am therefore trying to communicate with you regularly through various
                 communication means and will do so in the future too.
               </p>
               <p>
-                It gives me pleasure that VLBS is making a good progress to achieve its intended
+                It gives me pleasure that Cornortech is making a good progress to achieve its intended
                 goal and expanding day by day. Many unbanked have already received and are enjoying
                 its banking and non-banking services.
               </p>
             </div>
             <div className={styles.signature}>
               <h3>Basanta Raj Lamsal</h3>
-              <p>Chief Executive Officer, VLBS</p>
+              <p>Chief Executive Officer, Cornortech</p>
             </div>
             <button className="btn btn-outline">Read Full Message</button>
           </motion.div>

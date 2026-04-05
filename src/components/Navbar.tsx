@@ -28,35 +28,19 @@ const Navbar = () => {
   return (
     <>
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-        {/* Top bar — hidden on scroll */}
-        <div className={styles.topBar}>
-          <div className="container">
-            <div className={styles.topBarContent}>
-              <div className={styles.topBarLeft}>
-                <span><Phone size={12} /> 011-490671 / 011-490672</span>
-                <span>Banking with Happiness</span>
-              </div>
-              <div className={styles.topBarRight}>
-                <Link href="#" className={styles.langSwitch}>
-                  <Globe size={12} /> Nepali / English
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Main nav bar */}
-        <div className={styles.navMain}>
-          <Link href="/" className={styles.logoLink}>
-            <Image
-              src="/images/logo.svg"
-              alt="VLBS Logo"
-              width={170}
-              height={52}
-              priority
-              className={styles.logoImg}
-            />
-          </Link>
+        <div className="container">
+          <div className={styles.navInner}>
+            <Link href="/" className={styles.logoLink}>
+              <Image
+                src="/logo.png"
+                alt="Cornortech Logo"
+                width={180}
+                height={56}
+                priority
+                loading="eager"
+                className={styles.logoImg}
+              />
+            </Link>
 
           <div className={styles.desktopMenu}>
             {navLinks.map((link) => (
@@ -64,7 +48,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link href="/grievance" className="btn btn-primary" style={{ fontSize: '0.85rem', padding: '0.6rem 1.4rem' }}>
+            <Link href="/grievance" className="btn btn-accent" style={{ fontSize: '0.85rem', padding: '0.6rem 1.4rem' }}>
               Grievance Portal
             </Link>
           </div>
@@ -77,7 +61,8 @@ const Navbar = () => {
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
-      </nav>
+      </div>
+    </nav>
 
       {/* Mobile menu overlay */}
       <AnimatePresence>
@@ -99,10 +84,10 @@ const Navbar = () => {
             >
               <div className={styles.mobileHeader}>
                 <Image
-                  src="/images/logo.svg"
-                  alt="VLBS"
-                  width={120}
-                  height={40}
+                  src="/logo.png"
+                  alt="Cornortech"
+                  width={140}
+                  height={45}
                   className={styles.mobileLogo}
                 />
                 <button className={styles.mobileToggle} onClick={() => setIsOpen(false)}>
@@ -130,7 +115,7 @@ const Navbar = () => {
               </div>
 
               <div style={{ marginTop: 'auto', padding: '1rem 0' }}>
-                <Link href="/grievance" className="btn btn-primary" style={{ width: '100%', display: 'flex' }}>
+                <Link href="/grievance" className="btn btn-accent" style={{ width: '100%', display: 'flex' }}>
                   Grievance Portal
                 </Link>
               </div>

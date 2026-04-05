@@ -4,71 +4,26 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.35s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem 0;
 }
 
-/* Top info bar */
-.topBar {
-  background: var(--gradient-primary);
-  color: rgba(255,255,255,0.88);
-  padding: 0.45rem 0;
-  font-size: 0.78rem;
-  font-weight: 500;
-  overflow: hidden;
-  max-height: 40px;
-  transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease;
-}
-
-.scrolled .topBar {
-  max-height: 0;
-  padding: 0;
-  opacity: 0;
-}
-
-.topBarContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topBarLeft, .topBarRight {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-}
-
-.topBarLeft span {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.langSwitch {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: rgba(255,255,255,0.8);
-  transition: color 0.2s ease;
-}
-
-.langSwitch:hover { color: white; }
-
-/* Main nav row */
-.navMain {
-  background: white;
+.scrolled {
+  background: var(--glass);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  padding: 1rem 0;
+  box-shadow: var(--shadow-sm);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 16px rgba(0,51,102,0.06);
+}
+
+.navInner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 2rem;
   max-width: 1280px;
   margin: 0 auto;
-  gap: 2rem;
-}
-
-.scrolled .navMain {
-  box-shadow: 0 4px 24px rgba(0,51,102,0.1);
+  padding: 0 2rem;
 }
 
 .logoLink { display: flex; align-items: center; }
@@ -89,30 +44,35 @@
 
 .navLink {
   font-weight: 600;
-  font-size: 0.88rem;
-  color: var(--foreground);
-  padding: 0.5rem 0.875rem;
+  font-size: 0.9rem;
+  color: white;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-sm);
   transition: all 0.2s ease;
   white-space: nowrap;
   position: relative;
 }
 
+.scrolled .navLink {
+  color: var(--primary);
+}
+
 .navLink::after {
   content: '';
   position: absolute;
-  bottom: 3px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: var(--gradient-primary);
+  background: var(--accent);
   border-radius: 99px;
   transition: width 0.3s ease;
 }
 
-.navLink:hover { color: var(--primary); }
-.navLink:hover::after { width: 55%; }
+.navLink:hover { color: var(--accent); }
+.scrolled .navLink:hover { color: var(--accent); }
+.navLink:hover::after { width: 40%; }
 
 /* Mobile toggle */
 .mobileToggle {

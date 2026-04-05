@@ -66,15 +66,13 @@ const Footer = () => {
           <div className={styles.brand}>
             <div className={styles.logoWrapper}>
               <Image 
-                src="/images/logo.svg" 
-                alt="VLBS Logo" 
+                src="/logo.png" 
+                alt="Cornortech Logo" 
                 width={160} 
                 height={56}
               />
             </div>
-            <p className={styles.tagline}>
-              Vijaya Laghubitta Bittiya Sanstha Ltd. — Empowering communities across Nepal with accessible financial services since establishment.
-            </p>
+              Cornortech Microfinance Pvt. Ltd. — Empowering communities across Nepal with accessible financial services since establishment.
             <div className={styles.social}>
               <a href="https://www.facebook.com" className={styles.socialLink} aria-label="Facebook">
                 <FacebookIcon />
@@ -137,7 +135,7 @@ const Footer = () => {
                 <span className={styles.contactIcon}><MailIcon /></span>
                 <div className={styles.contactText}>
                   <span className={styles.contactLabel}>Email</span>
-                  <span className={styles.contactValue}>vlbs@vlbs.com.np</span>
+                  <span className={styles.contactValue}>info@cornortech.com.np</span>
                 </div>
               </div>
               <div className={styles.contactRow}>
@@ -154,7 +152,7 @@ const Footer = () => {
 
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {currentYear} Vijaya Laghubitta Bittiya Sanstha Limited. All rights reserved.
+            © {currentYear} Cornortech Microfinance Pvt. Ltd. All rights reserved.
           </p>
           <div className={styles.bottomLinks}>
             <Link href="#">Privacy Policy</Link>

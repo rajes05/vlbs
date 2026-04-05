@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VLBS | Vijaya Laghubitta Bittiya Sanstha Ltd.",
+  title: "Cornortech | Cornortech Microfinance Pvt. Ltd.",
   description: "Banking with Happiness. Empowering communities through microfinance and financial literacy.",
-  keywords: ["VLBS", "Microfinance", "Nepal Banking", "Financial Literacy", "Vijaya Laghubitta"],
+  keywords: ["Cornortech", "Microfinance", "Nepal Banking", "Financial Literacy", "Cornortech Microfinance"],
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={outfit.className}>{children}</body>
     </html>
   );
 }

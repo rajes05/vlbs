@@ -48,7 +48,7 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            VLBS For Your <span className="text-gradient">Needs</span>
+            Cornortech For Your <span className="text-gradient">Needs</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

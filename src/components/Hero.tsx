@@ -21,13 +21,18 @@ const Hero = () => {
             {/* Left: Content */}
             <div className={styles.content}>
               <motion.div
-                className={styles.tag}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                className={styles.premiumBadge}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <span className={styles.tagDot} />
-                Est. in Dhulikhel, Kavre, Nepal
+                <div className={styles.badgePulse}>
+                  <div className={styles.pulseDot} />
+                </div>
+                <span className={styles.badgeText}>
+                  <strong>EST. 2023</strong> <span className={styles.badgeDivider} />Tilottama, Nepal
+                </span>
+                <div className={styles.badgeGlow} />
               </motion.div>
 
               <motion.h1
@@ -36,9 +41,9 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
               >
-                Vijaya Laghubitta{' '}
-                <span className={styles.highlight}>Bittiya Sanstha</span>
-                {' '}Ltd.
+                Cornortech{' '}
+                <span className={styles.highlight}>Microfinance</span>
+                {' '}Pvt. Ltd.
               </motion.h1>
 
               <motion.p
@@ -57,10 +62,10 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
               >
-                <button className="btn btn-white">
+                <button className="btn btn-accent">
                   Grab Your Deals <ArrowRight size={16} />
                 </button>
-                <button className="btn btn-outline" style={{ border: '2px solid rgba(255,255,255,0.5)', color: 'white' }}>
+                <button className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
                   Explore Services
                 </button>
               </motion.div>
@@ -80,7 +85,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <h3>Branch on Map</h3>
-                  <p>Find your nearest VLBS branch across Nepal.</p>
+                  <p>Find your nearest Cornortech branch across Nepal.</p>
                 </div>
                 <ArrowRight size={16} style={{ marginLeft: 'auto', color: 'var(--text-muted)' }} />
               </motion.div>

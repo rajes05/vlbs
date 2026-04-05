@@ -10,6 +10,21 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "cornortech.com.np",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "via.placeholder.com",
         pathname: "/**",
       },
