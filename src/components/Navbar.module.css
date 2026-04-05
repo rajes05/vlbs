@@ -4,17 +4,15 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 1.5rem 0;
+  background: white;
+  border-bottom: 1px solid #ede8f5;
+  box-shadow: 0 2px 12px rgba(75, 44, 133, 0.08);
+  padding: 0.85rem 0;
+  transition: box-shadow 0.3s ease;
 }
 
 .scrolled {
-  background: var(--glass);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  padding: 1rem 0;
-  box-shadow: var(--shadow-sm);
-  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(75, 44, 133, 0.13);
 }
 
 .navInner {
@@ -34,7 +32,6 @@
   object-fit: contain;
 }
 
-/* Desktop */
 .desktopMenu {
   display: flex;
   align-items: center;
@@ -45,22 +42,20 @@
 .navLink {
   font-weight: 600;
   font-size: 0.9rem;
-  color: white;
+  color: var(--primary);
   padding: 0.5rem 1rem;
   border-radius: var(--radius-sm);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   white-space: nowrap;
   position: relative;
-}
-
-.scrolled .navLink {
-  color: var(--primary);
+  filter: none;
+  opacity: 1;
 }
 
 .navLink::after {
   content: '';
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
@@ -71,10 +66,8 @@
 }
 
 .navLink:hover { color: var(--accent); }
-.scrolled .navLink:hover { color: var(--accent); }
 .navLink:hover::after { width: 40%; }
 
-/* Mobile toggle */
 .mobileToggle {
   display: none;
   background: none;
@@ -89,17 +82,15 @@
 
 .mobileToggle:hover { background: var(--surface); }
 
-/* Overlay */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 1001;
 }
 
-/* Mobile slide panel */
 .mobileMenu {
   position: fixed;
   top: 0;
@@ -112,7 +103,7 @@
   flex-direction: column;
   padding: 1.5rem;
   overflow-y: auto;
-  box-shadow: -8px 0 40px rgba(0,51,102,0.14);
+  box-shadow: -8px 0 40px rgba(0, 51, 102, 0.14);
 }
 
 .mobileHeader {
@@ -158,6 +149,5 @@
 }
 
 @media (max-width: 640px) {
-  .navMain { padding: 0.6rem 1.25rem; }
-  .topBarLeft span:last-child { display: none; }
+  .navInner { padding: 0 1.25rem; }
 }

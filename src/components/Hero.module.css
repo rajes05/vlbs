@@ -3,12 +3,11 @@
    ═══════════════════════════════════════════════════ */
 
 .heroWrap {
-  margin-top: 0; /* hero sits behind the fixed navbar */
+  margin-top: 80px; /* push everything below the solid white navbar */
 }
 
 /* ── Ticker ─────────────────────────────────────── */
 .ticker {
-  margin-top: 80px; /* push ticker content below fixed navbar */
   background: var(--primary);
   display: flex;
   align-items: stretch;
